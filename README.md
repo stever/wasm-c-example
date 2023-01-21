@@ -14,10 +14,12 @@ Recompiling the `hello.wasm` file:
 
 ```bash
 emcc hello.c -o hello.js
-emcc hello.c -O3 -o hello.html
 ```
 
+Optimise code, and emit HTML:
+
 ```bash
+emcc hello.c -O3 -o hello.html
 python -m http.server 8000
 ```
 
