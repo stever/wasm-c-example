@@ -2,6 +2,8 @@
 
 WebAssembly example using C using [Emscripten](https://emscripten.org/).
 
+Activate the Emscripten SDK:
+
 ```bash
 git clone https://github.com/emscripten-core/emsdk.git
 cd emsdk
@@ -14,12 +16,18 @@ Recompiling the `hello.wasm` file:
 
 ```bash
 emcc hello.c -o hello.js
+node hello.js
 ```
 
 Optimise code, and emit HTML:
 
 ```bash
 emcc hello.c -O3 -o hello.html
+```
+
+Serve via HTTP:
+
+```bash
 python -m http.server 8000
 ```
 
